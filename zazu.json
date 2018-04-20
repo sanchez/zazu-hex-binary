@@ -1,9 +1,31 @@
 {
-  "name": "zazu-template",
+  "name": "Numeric Converter",
   "version": "1.0.0",
-  "description": "Zazu Template for starting your own plugin.",
+  "description": "Plugin to convert hex, binary and decimal numbers inside zazu",
   "blocks": {
     "input": [
+      {
+        "id": "hex",
+        "type": "PrefixScript",
+        "prefix": "0x",
+        "space": false,
+        "args": "Required",
+        "script": "src/hex.js",
+        "connections": [
+          "DisplayResult"
+        ]
+      },
+      {
+        "id": "bin",
+        "type": "PrefixScript",
+        "prefix": "0b",
+        "space": false,
+        "args": "Required",
+        "script": "src/bin.js",
+        "connections": [
+          "DisplayResult"
+        ]
+      },
       {
         "id": "template",
         "type": "Keyword",
@@ -39,6 +61,11 @@
         "id": "GoHome",
         "type": "OpenInBrowser",
         "url": "https://github.com/tinytacoteam/zazu-template"
+      },
+      {
+        "id": "DisplayResult",
+        "type": "CopyToClipboard",
+        "text": "{value}"
       }
     ]
   }
