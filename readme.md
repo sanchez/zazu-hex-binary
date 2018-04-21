@@ -1,5 +1,14 @@
-## Zazu Template
+# Zazu Hex and Binary Converter
+This is a plugin for zazu that converts hex and binary numbers
 
-[![Build Status](https://travis-ci.org/tinytacoteam/zazu-template.svg?branch=master)](https://travis-ci.org/tinytacoteam/zazu-template)
+## From Binary
+To convert a binary number, begin the binary input with `0b`
 
-Zazu Template for starting your own plugin.
+## From Hex
+To convert a hexidecimal number, begin the hex input with `0x`
+
+## To Binary
+Input the decimal number with a prefix before the number, for example: `bin 52`
+
+## To Hex
+Input the decimal number with a prefix before the number, for example: `hex 52`
